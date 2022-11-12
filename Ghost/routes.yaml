@@ -1,0 +1,19 @@
+routes:
+  /:
+    data: page.home
+    template: home
+  /explore/:
+    data: page.explore
+    template: home
+
+
+collections:
+  /blog/:
+    permalink: /blog/{slug}/
+    controller: channel
+    filter: tag:-latertech-digest
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
